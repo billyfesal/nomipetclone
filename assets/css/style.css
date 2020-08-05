@@ -1,0 +1,497 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* HEADER */
+
+header {
+    background-color: #FECDBE;
+    height: 100px;
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    height: 100%;
+    padding-right: 80px;
+    padding-left: 80px;
+    /* width: 100%;
+    max-width: 1200px;
+    padding: 0 100px;  */
+}
+  
+.row {
+    display: flex;
+    flex-wrap: wrap;  
+    flex-direction: row;
+    justify-content: flex-start;
+    flex: 1;  
+}
+  
+.col-12 {
+    width: calc(100% / 12 * 12); /*100%*/
+    /* background-color: cyan; */
+    height: 100%;
+}
+
+.col-6 {
+    width: calc(100% / 12 * 6); /*50%*/
+    /* background-color: violet; */
+    height: 100%;
+    /* border: 5px solid orange; */
+}
+.col-4 {
+    width: calc(100% / 12 * 4); /*33.33%*/
+    /* background-color: peru; */
+    height: auto;
+    
+    /* border: 5px solid royalblue; */
+}
+
+.nomiLogo {
+    width: 130px;
+    margin: 20px;
+}
+
+.menu-icon {
+    cursor: pointer;
+    padding: 0px 15px;
+    position: relative;
+    user-select: none;
+    /* order: 0; */
+  }
+
+  .menu-icon .navicon {
+    background: gray;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 18px;
+  }
+
+  .menu-icon .navicon:before,
+  .menu-icon .navicon:after {
+    background: gray;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
+  .menu-icon .navicon:before {
+    top: 5px;
+    background: gray;
+  }
+
+  .menu-icon .navicon:after {
+    top: -5px;
+    background-color: gray;
+  } 
+
+  .menu-btn {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  #menu-btn:checked ~ .menu{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 40px;
+    background-color: FECDBE;
+    width: 100%;
+    /* height: calc(100vh - 40px); */
+  }
+
+  #menu-btn:checked ~ .menu li{
+    padding: 5px 10px;
+    color: #fff;
+    list-style: none;
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon:before,
+  .menu-btn:checked ~ .menu-icon .navicon:after {
+    top: 0;
+  }
+
+  @media (min-width: 768px) {
+    .menu-icon{
+      display: none;
+    }
+
+    .menu{
+      display: flex;
+    }
+
+    .menu li {
+      list-style: none;      
+      padding: 0 10px;
+    }
+  }
+
+/* SECTION ONE */
+.sectionOne {
+    display: flex;
+    width: 100%;
+    padding-top: 80px;
+    height: 600px;
+    background-color: #FECDBE;
+}
+
+.heading {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  font-size: 60px;
+  line-height: 1.2em;
+  font-weight: 600;
+  text-align: left;
+}
+
+.par {
+  margin-left: 20px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: left;
+  padding-bottom: 50px;
+  color: rgba(17, 17, 17, 0.75);  
+}
+
+.appleStoreButton {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  padding: 14px 20px 14px 45px;
+  border-left: 0 solid #949494;
+  border-radius: 8px;
+  background-color: black;
+  background-image: url('../../assets/img/icon-apple-white@2x.png');
+  background-position: 15px 43%;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  font-family: 'IBM Plex Mono', sans-serif;
+}
+
+.textButton {
+  color: white;
+  text-decoration: none;
+}
+
+.helpPageLink {
+  margin-left: 20px;
+  margin-top: 50px;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(17, 17, 17, 0.75);
+}
+
+.mainPic {
+  /* width: 475px;
+  height: 525px; */
+}
+
+/* SECTION TWO */
+
+.sectionTwo {
+    width: 100%;
+    background-color: white;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    height: 184px;
+}
+
+.secTwocolOne {
+  display: flex;
+  align-items: center;
+}
+
+.secTwocolTwo {
+  display: flex;  
+  align-items: center;
+}
+
+.watchImage {
+  padding-right: 40px;
+  width: 120px;
+}
+
+.imageTxt.left {
+  font-size: 18px;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.imageTxt {
+  line-height: 38px;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  box-sizing: border-box;
+  display: block;
+}
+
+.parTxt.left {
+  width: 100%;
+  font-weight: 400;
+  text-align: left;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 18px;
+}
+
+.parTxt {
+  overflow: visible;
+  display: block;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  line-height: 1.5em;
+}
+
+.healthkit {
+  width: 114px;
+}
+
+/* SECTION THREE */
+
+.sectionThree {
+    height: 1230px;
+    background-color: black;
+    color: white;
+    padding: 50px;
+}
+
+.rowOne {
+  display: flex;
+  height: 294px;
+}
+
+.rowTwo {
+  display: flex;
+  height: 233px;
+}
+
+.rowThree {
+  display: flex;
+  height: 233px;
+}
+
+.rowFour {
+  display: flex;
+  height: 233px;
+}
+
+.rowFive {
+  height: 255px;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.rowFive h4 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  
+}
+
+.comments {
+  padding: 20px;
+}
+
+.nomiGif {
+  width: 200px;
+}
+
+.reviewer {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.stars {
+  height: 25px;
+}
+
+.feedBack {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.75) 
+}
+
+
+
+/* SECTION FOUR */
+
+.sectionFour {
+    height: 815px;
+    background-color: white;
+    padding-top: 115px;
+}
+
+.howToPlay{
+    text-align: center;
+    padding-bottom: 30px;
+}
+.howToPlayHead {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 72px;
+  margin-bottom: 25px;  
+}
+
+.fourTwo {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(17, 17, 17, 0.75);
+  line-height: 27px;
+}
+
+.stepsEs {
+  padding:30px;  
+}
+
+.stepsImage {
+  width: 384px;
+}
+
+.stepsEs h1 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 38px;
+}
+
+.stepsEs h3 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  color: rgba(17, 17, 17, 0.75);
+  justify-items: center;
+}
+
+.stepsEs .col-4 {
+  
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+
+
+
+/* SECTION FIVE */
+.sectionFive {
+    height: 845px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.rowFiveOne h2 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 38px;
+}
+
+.rowFiveOne h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 27px;
+}
+.rowFiveTwo {
+  justify-content: center;
+}
+
+.hatch {
+  width: 320px;
+  margin-top: 50px;
+  margin-bottom: 100px;  
+}
+
+.appleStoreButtonTwo {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  padding: 14px 50px 14px 45px;
+  border-left: 0 solid #949494;
+  border-radius: 8px;
+  background-color:#FECDBE;
+  background-image: url('../../assets/img/img-apple.png'); 
+  background-position: 15px 43%;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  color: black;  
+}
+
+.secondButton h4 {
+  padding-top: 30px;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* FOOTER */
+footer {
+    background-color: black;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contributors {
+  display: flex;
+  list-style: none;
+  padding-bottom: 15px;
+  font-size: 12px;
+  font-weight: 400px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.75); 
+}
+
+.footerItem {
+  padding-left: 10px;  
+  padding-right: 10px;
+  color: rgba(255, 255, 255, 0.75);
+}
